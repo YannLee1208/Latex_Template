@@ -1,0 +1,138 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\geometry{a4paper}
+%\usepackage[UTF8, heading = false, scheme = plain]{ctex}%格式
+\usepackage{ctex}
+\usepackage{graphicx} %添加图片
+\usepackage{amsthm}
+\usepackage{appendix}
+\usepackage{amsmath}
+\usepackage{tocloft}
+\usepackage{listings}
+\renewcommand{\vec}[1]{\boldsymbol{#1}} % 生产粗体向量，而不是带箭头的向量
+\usepackage{amssymb}
+\usepackage{booktabs} % excel导出的大表格
+\usepackage{fontspec}
+\usepackage{xcolor}
+ 
+% \setmainfont{Times New Roman}
+
+\newcommand{\xiaoer}{\fontsize{18pt}{18pt}\selectfont}
+\newcommand{\yihao}{\fontsize{26pt}{26pt}\selectfont}
+\newcommand{\xiaosan}{\fontsize{15pt}{22pt}\selectfont}
+% \renewcommand{\baselinestretch}{1.8}    %两倍行距
+\renewcommand{\contentsname}{\hfill\bfseries\Large Contents\hfill}   
+\renewcommand{\cftaftertoctitle}{\hfill}
+% \definecolor{grey}{rgb}{0.8,0.8,0.8}
+% \definecolor{darkgreen}{rgb}{0,0.3,0}
+% \definecolor{darkblue}{rgb}{0,0,0.3}
+% \def\lstbasicfont{\fontfamily{pcr}\selectfont\footnotesize}
+% \lstset{%
+%    % numbers=left,
+%    % numberstyle=\small,%
+%    	language=Matlab,
+%     showstringspaces=false,
+%     showspaces=false,%
+%     breaklines=true,%
+%     tabsize=4,%
+%     frame=lines,%
+%     basicstyle={\footnotesize\lstbasicfont},%
+%     keywordstyle=\color{darkblue}\bfseries,%
+%     identifierstyle=,%
+%     commentstyle=\color{darkgreen},%\itshape,%
+%     stringstyle=\color{black},%
+% }
+
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+% \def\lstbasicfont{\fontfamily{pcr}\selectfont\footnotesize}
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    tabsize=4,%
+    morekeywords={matlab2tikz},
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},   
+    frame=lines,% 
+    % basicstyle={\footnotesize\lstbasicfont},%
+    keywordstyle=\color{blue},%
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+}
+
+
+
+
+\begin{document}
+
+\begin{figure}[htbp]
+\flushright
+\includegraphics[width = 0.25 \linewidth]{./image/log.png}
+\end{figure}
+
+\vspace{40pt}
+
+\centerline{\xiaoer\textbf{Laboratory Report of Digital Signal Processing}}
+
+\vspace{10pt}
+\centerline{\xiaosan Lab1.XXXX} % Times New Roman，小二
+
+
+\vspace{80pt}
+
+
+\begin{center}
+ \begin{tabular}{rl}
+  \vspace{10pt}
+  &\xiaosan Name:八元\\
+  \vspace{10pt}
+  &\xiaosan No:\\
+  \vspace{10pt}
+  &\xiaosan Date:\\
+  \vspace{10pt}
+  &\xiaosan Score:\rule{3cm}{0.15mm}\\
+  \end{tabular}
+\end{center}
+\vspace{100pt}
+
+\begin{center}
+\vspace{10pt}
+{\xiaosan\textbf{SHANGHAI JIAOTONG UNIVERSITY}}\\   %宋体，小二，加粗
+{\xiaosan\textbf{SJTU-ParisTech Elite Institute of Technology}} % Times New Roman，小二
+\end{center}
+% \maketitle
+
+\newpage
+\tableofcontents
+\newpage
+
+
+\section{Introduction}
+\subsection{}
+\subsection{}
+\subsection{}
+
+\section{Summary}
+
+\bibliographystyle{plain}
+\bibliography{ref}
+
+\newpage
+
+\begin{appendices}
+\section{Code Example}
+\lstinputlisting[language=Matlab]{code/ex.m}
+
+\end{appendices}
+
+
+
+\end{document}

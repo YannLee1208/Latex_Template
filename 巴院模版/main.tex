@@ -1,0 +1,94 @@
+%%% Ne pas modifier jusqu'à la ligne 25
+\documentclass[a4paper,12pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[left=2cm,right=2cm,top=3cm,bottom=2cm, headheight=1.5cm,headsep=1.5cm]{geometry}
+
+\usepackage{amsmath,amsfonts,amssymb,dsfont}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{appendix}
+\usepackage{enumitem}		%\enumerate-resume
+\usepackage[colorlinks=true,unicode={true},hyperindex=false, linkcolor=blue, urlcolor=blue]{hyperref}
+\newcommand{\myref}[1]{\ref{#1} page \pageref{#1}}
+\usepackage[T1]{fontenc}
+
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{bm}
+
+\addto\captionsfrench{\def\tablename{Tableau}}  %légendes des tableaux
+\renewcommand\thesection{\Roman{section}~-~} 
+\renewcommand\thesubsection{\Roman{section}.\Alph{subsection}~-~} 
+\renewcommand\thesubsubsection{\Roman{section}.\Alph{subsection}.\arabic{subsubsection}~-~} 
+
+\setcounter{secnumdepth}{3}
+\parindent=0pt
+
+\newcommand{\conclusion}[1]{\newline \centerline{\fbox{#1}}}
+
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{SJTU-ParisTech} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chead{Projet}
+\rhead{Yann}
+
+\begin{document}
+
+\renewcommand{\labelitemi}{$\blacktriangleright$}
+\renewcommand{\labelitemii}{$\bullet$}
+
+%%% Page de garde
+\thispagestyle{empty}
+\begin{center}
+\includegraphics{Image/cover1}
+\hspace{86pt}
+\includegraphics{Image/cover2}
+\end{center}
+%
+\vspace{125pt}
+%
+\begin{center}
+\scalebox{1.0}{\Huge{\textbf{}}}
+\end{center}
+
+\begin{center}
+\scalebox{1.0}{\Huge{\textbf{Projet}}}
+\end{center}
+%
+\vspace{2em} \Large
+%
+\begin{center}
+\textbf{Yann}
+\end{center}
+%
+\vspace{1em}
+%
+\begin{center}
+\includegraphics[scale=1.2]{Image/cover3}
+\end{center}
+%
+\vspace{1em} \normalsize
+%
+\begin{center}
+\textbf{Projet} %
+\end{center}
+
+\clearpage
+\thispagestyle{empty}
+\tableofcontents
+\clearpage
+
+\section{Introduction}
+
+\newpage
+
+\bibliographystyle{plain}
+\bibliography{ref}
+
+
+\end{document}
